@@ -1,0 +1,35 @@
+// Шаблоны % не могут использоваться в media запросах. По-этому для медиа мы делаем миксин
+@mixin dark-theme {
+    --primary: #06A56C;
+    --primary-hover: #37BD8D;
+
+    --secondary: #01579B;
+    --secondary-hover: #3582BF;
+
+    --danger: #a12935;
+    --danger-hover: #f03a4d;
+
+    --bg-color: #121212;
+    --bg-color-secondary: #282828;
+    --bg-color-inverted: #636363;
+    --bg-color-primary: #3f3f3f;
+    --text-color: #dbd8d8;
+
+    --box-shadow-soft: 0px 9px 18px rgba(233, 232, 230, 0.1), 0px -9px 18px rgba(233, 232, 230, 0.1);
+    --box-shadow-common: var(--box-shadow-soft);
+    --box-shadow-glow: 0px 9px 18px rgba(233, 232, 230, 0.3), 0px -9px 18px rgba(233, 232, 230, 0.3);
+}
+
+%dark-theme {
+    @include dark-theme;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        @include dark-theme;
+    }
+}
+
+body[data-app-theme=app_dark_theme] {
+    @extend %dark-theme;
+}

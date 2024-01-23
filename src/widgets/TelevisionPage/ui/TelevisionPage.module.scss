@@ -1,0 +1,130 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.characteristicsList {
+    max-height: calc(100dvh - 340px);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        /* ширина scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--bg-color-inverted);
+        /* цвет дорожки */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--dark-grey);
+        /* цвет плашки */
+        border-radius: 2px;
+        /* закругления плашки */
+        // border: 3px solid orange;
+        /* padding вокруг плашки */
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .characteristicsList {
+        max-height: calc(100dvh - 360px);
+    }
+}
+
+@media screen and (max-width: 728px){
+    .characteristicsList {
+        max-height: none;
+    }
+}
+
+.characteristicListItem {
+    border-bottom: 1px dashed var(--text-color);
+    border-right: 1px dashed var(--text-color);
+    padding: 20px;
+}
+
+.mainTitle {
+    font: var(--font-xl);
+    margin-bottom: 15px;
+}
+
+
+.characteristicsTitle {
+    font-size: var(--font-size-l);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.characteristic {
+    display: flex;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 360px){
+    .characteristic {
+        flex-wrap: wrap;
+    }
+
+    .mainTitle {
+        font: var(--font-l);
+    }
+}
+
+.description {
+    width: 100%;
+    max-height: 294px;
+    margin-bottom: 17px;
+    overflow-y: hidden;
+
+    &.opened {
+        max-height: none;
+    }
+}
+
+.listItem {
+    padding-bottom: 21px;
+    &:not(:first-child){
+        padding-top: 15px;
+    }
+    &:not(:last-child) {
+        border-bottom: 1px dashed var(--text-color);
+    }
+}
+
+.characteristics {
+    flex: 1 1;
+}
+
+.television {
+    max-width: 320px;
+    padding: 12px 10px;
+    flex: 1 0;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    gap: 20px;
+    background: var(--bg-color-primary);
+    border-radius: 7px;
+    border: 1px solid var(--text-color);
+    box-shadow: var(--box-shadow-common);
+}
+
+.figure {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.price {
+    font: var(--font-m);
+    font-weight: 600;
+    align-self: end;
+}

@@ -1,0 +1,76 @@
+.filterIcon {
+    path {
+        fill: var(--text-color);
+    }
+}
+
+.heading {
+    display: flex;
+    gap: 7px;
+    font: var(--font-l);
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.filters {
+    overflow-y: scroll;
+    max-height: calc(100dvh - 400px);
+    padding-right: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        /* ширина scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--bg-color-inverted);
+        /* цвет дорожки */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--dark-grey);
+        /* цвет плашки */
+        border-radius: 1px;
+        /* закругления плашки */
+        // border: 3px solid orange;
+        /* padding вокруг плашки */
+    }
+}
+
+.btnGroup {
+    padding-right: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px){
+    .filters {
+        max-width: max-content;
+        max-height: calc(100dvh - 110px);
+    }
+    
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 728px) {
+    .form {
+        align-items: start;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .filters {
+        max-height: calc(100dvh - 150px);
+    }
+}

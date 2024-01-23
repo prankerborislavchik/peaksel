@@ -1,0 +1,35 @@
+// Шаблоны % не могут использоваться в media запросах. По-этому для медиа мы делаем миксин
+@mixin light-theme {
+    --primary: #06A56C;
+    --primary-hover: #37BD8D;
+
+    --secondary: #01579B;
+    --secondary-hover: #3582BF;
+
+    --danger: #a12935;
+    --danger-hover: #f03a4d;
+
+    --text-color: #141414;
+
+    --bg-color: #f7f2f2;
+    --bg-color-secondary: #f7f3f3;
+    --bg-color-inverted: #8b8b8b;
+    --bg-color-primary: #ece8e8; 
+    --box-shadow-common: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) -3px -3px 18px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    --box-shadow-soft: rgba(0, 0, 0, 0.1) 0px 0px 9px 0px, rgba(0, 0, 0, 0.1) 0px 0px 3px 0px;
+    --box-shadow-glow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+%light-theme {
+    @include light-theme;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        @include light-theme;
+    }
+}
+
+body[data-app-theme=app_light_theme] {
+    @extend %light-theme;
+}

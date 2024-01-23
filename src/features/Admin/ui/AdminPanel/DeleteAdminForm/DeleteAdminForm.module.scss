@@ -1,0 +1,11 @@
+.form {
+    padding: 1.2rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--text-color);
+}
+
+.formWrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}

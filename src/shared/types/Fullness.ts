@@ -1,0 +1,1 @@
+export type Fullness = "filled" | "outlined"

@@ -1,0 +1,21 @@
+.heading {
+    margin: 0;
+    font: var(--font-xl);
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 530px) {
+    .heading {
+        font: var(--font-l);
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .heading {
+        font: var(--font-l);
+        margin-top: 5px;
+        margin-bottom: 65px;
+        text-align: center;
+    }
+}

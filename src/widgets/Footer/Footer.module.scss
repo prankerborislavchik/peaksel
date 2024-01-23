@@ -1,0 +1,56 @@
+.wrapper {
+    background: var(--bg-color-secondary);
+    box-shadow: var(--box-shadow-common);
+    border-radius: 12px 12px 0 0;
+    padding-top: 14px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.SMListWrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+}
+
+.telegramIcon {
+}
+
+.whatsAppIcon {
+}
+
+.mainHeading {
+    margin-bottom: 8px;
+}
+
+.copyright {
+    font: var(--font-m);
+    font-weight: bolder;
+    align-self: center;
+    padding: 0 32px;
+}
+
+@media screen and (max-width: 568px) {
+    .copyright {
+        padding-right: 0;
+        padding-left: 18px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .copyright {
+        padding-left: 0;
+        padding-right: 24px;
+        padding-bottom: 32px;
+    }
+
+    .customerHelp {
+        margin-bottom: 6px;
+    }
+}

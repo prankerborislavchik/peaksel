@@ -1,0 +1,50 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    // align-items: center;
+}
+
+.form {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.error {
+    position: absolute;
+    bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 609px) {
+    .error {
+        bottom: 100px;
+    } 
+}
+
+@media screen and (max-width: 404px) {
+    .input {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 372px){
+    .input {
+        // font: var(--font-s) !important;
+        padding: 8px 2px !important;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .form {
+        gap: 45px;
+    }
+    .input {
+        font-size: 16px !important;
+    }
+}

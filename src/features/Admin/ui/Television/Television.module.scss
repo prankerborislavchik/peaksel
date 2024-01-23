@@ -1,0 +1,29 @@
+.formWrapper {
+    padding: 8px;
+    background: var(--bg-color-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--text-color);
+    width: 100%;
+    justify-content: stretch;
+    align-items: stretch;
+    box-shadow: var(--box-shadow-common);
+}
+
+.form {
+    display: flex;
+    gap: 10px;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.success {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+
+    &.input {
+        border-width: 2px !important;
+    }
+}

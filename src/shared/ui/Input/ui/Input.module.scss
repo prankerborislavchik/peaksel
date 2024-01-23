@@ -1,0 +1,118 @@
+.Input {
+    // background: var(--bg-color);
+    background: var(--bg-color-secondary);
+    color: var(--text-color);
+    border: 1px solid var(--grey-20);
+
+    transition-property: border, box-shadow, transform, color, background;
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+
+    &.S {
+        border-radius: 4px;
+        padding: 6px 8px;
+        font: var(--font-s);
+    }
+
+    &.M {
+        border-radius: 6px;
+        padding: 8px 9px;
+        font: var(--font-m);
+    }
+
+    &.L {
+        border-radius: 8px;
+        padding: 10px 12px;
+        font: var(--font-l);
+    }
+
+    &.XL {
+        border-radius: 10px;
+        padding: 12px 16px;
+        font: var(--font-xl);
+    }
+
+    &:focus,
+    &:hover {
+        outline: none;
+        border: 1px solid var(--active-blue);
+        box-shadow: var(--active-blue-shadow);
+    }
+
+    &:disabled {
+        outline: none;
+        border: 1px solid var(--grey-20);
+        box-shadow: none;
+        color: var(--grey-20);
+    }
+
+    &.error {
+        border: 1px solid var(--error-red);
+        color: var(--error-red);
+
+
+        &:hover {
+            color: var(--dark-grey);
+        }
+
+        &:focus {
+            color: var(--text-color);
+        }
+
+        &:hover,
+        &:focus {
+            border: 1px solid var(--active-blue);
+            box-shadow: var(--active-blue-shadow);
+        }
+    }
+
+    // ЗАМЕНА ЦВЕТА У PLACEHOLDER'A
+    &::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: var(--grey-40);
+    }
+
+    &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: var(--grey-40);
+        opacity: 1;
+    }
+
+    &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: var(--grey-40);
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: var(--grey-40);
+    }
+
+    &::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: var(--grey-40);
+    }
+
+    &::placeholder {
+        /* Most modern browsers support this now. */
+        color: var(--grey-40);
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0;
+        /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+    &[type=number] {
+        -moz-appearance: textfield;
+        /* Firefox */
+    }
+}
+
+.errorMsg {
+    color: var(--error-red);
+}

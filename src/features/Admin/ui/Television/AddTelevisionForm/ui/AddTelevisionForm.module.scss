@@ -1,0 +1,70 @@
+.form {
+    max-height: calc(100dvh - 322px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    background: var(--bg-color-secondary);
+    box-shadow: var(--box-shadow-common);
+    padding: 2rem 1rem;
+    border-radius: 0.8rem;
+    min-width: 60%;
+}
+
+.featuresWrapper {
+    overflow-y: scroll; 
+    &::-webkit-scrollbar {
+        width: 4px;
+        /* ширина scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--bg-color-inverted);
+        /* цвет дорожки */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--dark-grey);
+        /* цвет плашки */
+        border-radius: 1px;
+        /* закругления плашки */
+        // border: 3px solid orange;
+        /* padding вокруг плашки */
+    }
+}
+
+.featuresList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding-right: 7px;
+    position: relative;
+}
+
+.featuresItem {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid var(--text-color);
+    padding: 0.8rem 1rem;
+    border-radius: 0.4rem;
+    background: var(--bg-color-primary);
+}
+
+.labelWrapper {
+    position: relative;
+}
+
+.error {
+    color: var(--error-red);
+}
+
+.hidden {
+    position: absolute;
+    opacity: 0;
+    display: none !important;
+}
+
+.success {
+    color: var(--primary-hover) !important;
+    border-color: var(--primary-hover) !important;
+}

@@ -1,3 +1,59 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": ["jest"],
+  "extends": [
+    "plugin:jest/recommended",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:sonarjs/recommended",
+    "plugin:security/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
+  ],
+  "rules": {
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "none"
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 110,
+        "ignoreComments": true
+      }
+    ],
+    "security/detect-object-injection": "off",
+    "indent": [
+      "error",
+      4
+    ],
+    "no-extra-boolean-cast": "off",
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "react/display-name": "off",
+    "sonarjs/no-all-duplicated-branches": "off",
+    "sonarjs/cognitive-complexity": "off",
+    "security/detect-possible-timing-attacks)": "off",
+    "@tanstack/query/exhaustive-deps": "error",
+    "@tanstack/query/no-rest-destructuring": "warn",
+    "@tanstack/query/stable-query-client": "error",
+    "sonarjs/no-duplicate-string": [
+      "error",
+      {
+        "threshold": 7
+      }
+    ],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  },
+  "env": {
+    "jest/globals": true
+  }
 }

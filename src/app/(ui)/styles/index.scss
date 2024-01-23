@@ -1,0 +1,117 @@
+@import "normalize.scss";
+@import "themes/light.scss";
+@import "themes/dark.scss";
+@import "variables/global.scss";
+
+
+ul {
+    list-style-type: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    // overflow-y: hidden;    
+    background: var(--bg-color);
+    color: var(--text-color);
+    max-width: 100vw;
+    height: 100dvh;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        /* ширина scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--bg-color-inverted);
+        /* цвет дорожки */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--dark-grey);
+        /* цвет плашки */
+        border-radius: 1px;
+        /* закругления плашки */
+        // border: 3px solid orange;
+        /* padding вокруг плашки */
+    }
+
+    &.modalOpened {
+        overflow: hidden;
+    }
+}
+
+html {
+    font: var(--font-m);
+}
+
+.wrapper {
+    max-width: 100dvw;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    &.center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 0 50px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        padding: 0 123px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .container {
+        padding: 0 194px;
+    }
+}
+
+
+.main {
+    flex: 1 0 100%;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+}
+
+textarea {
+    resize: none;
+}

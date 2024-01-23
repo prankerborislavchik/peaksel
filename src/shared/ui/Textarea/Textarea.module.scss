@@ -1,0 +1,92 @@
+.textarea {
+    outline: none;
+    background-color: var(--bg-color-secondary);
+    font: var(--font-m);
+    border-radius: 6px;
+    padding: 8px 9px;
+    border: 1px solid var(--grey-20);
+    transition-property: border, box-shadow, transform, color, background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    color: var(--text-color);
+
+    &.error {
+        border: 1px solid var(--error-red);
+        color: var(--error-red);
+
+
+        &:hover {
+            color: var(--dark-grey);
+        }
+        &:focus {
+            color: var(--text-color);
+        }
+
+        &:hover,
+        &:focus {
+            border: 1px solid var(--active-blue);
+            box-shadow: var(--active-blue-shadow);
+        }
+    }
+
+    &:focus, &:hover {
+        border: 1px solid var(--active-blue);
+        box-shadow: var(--active-blue-shadow);
+    }
+
+    // ЗАМЕНА ЦВЕТА У PLACEHOLDER'A
+    &::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: var(--grey-40);
+    }
+
+    &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: var(--grey-40);
+        opacity: 1;
+    }
+
+    &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: var(--grey-40);
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: var(--grey-40);
+    }
+
+    &::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: var(--grey-40);
+    }
+
+    &::placeholder {
+        /* Most modern browsers support this now. */
+        color: var(--grey-40);
+    }
+
+        &::-webkit-scrollbar {
+        width: 6px;
+        /* ширина scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--bg-color-inverted);
+        /* цвет дорожки */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--dark-grey);
+        /* цвет плашки */
+        border-radius: 1px;
+        /* закругления плашки */
+        border: 1px solid var(--text-color);
+        /* padding вокруг плашки */
+    }
+}
+
+.error {
+    color: var(--error-red);
+}

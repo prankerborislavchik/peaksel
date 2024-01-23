@@ -1,0 +1,33 @@
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form {
+    // background: var(--bg-color-primary);
+    // box-shadow: var(--box-shadow-common);
+    // padding: 42px 21px;
+    // border-radius: 12px;
+    // display: flex;
+    // flex-direction: column;
+    // gap: 1rem;
+    padding: 1.2rem 0.8rem !important;
+    border-radius: 8px;
+    border: 1px solid var(--text-color);
+}
+
+.success {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+
+    &.input {
+        border-width: 2px !important;
+    }
+}
+
+.formWrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,13 @@
+.img {
+    display: none;
+}
+
+@media screen and (max-width: 380px) {
+    .text {
+        display: none;
+    }
+    .img {
+        display: block;
+    }
+
+}

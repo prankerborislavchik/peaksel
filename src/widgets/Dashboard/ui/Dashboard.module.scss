@@ -1,0 +1,21 @@
+.panelWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 0.6rem;
+    background: var(--bg-color-inverted);
+    box-shadow: var(--box-shadow-common);
+}
+
+.panelItem {
+    flex: 1 0 calc(33% - 1rem);
+    background: var(--bg-color-secondary);
+    box-shadow: var(--box-shadow-common);
+    border: 1px solid var(--text-color);
+    border-radius: 16px;
+    padding: 8px;
+}
+
+

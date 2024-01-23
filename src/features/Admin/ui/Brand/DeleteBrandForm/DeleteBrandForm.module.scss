@@ -1,0 +1,10 @@
+.form {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.formWrapper {
+    box-shadow: var(--box-shadow-common);
+}

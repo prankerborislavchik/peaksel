@@ -1,0 +1,138 @@
+.wrapper {
+    width: 100%;
+    background: url('/1651760372_new_preview_Anubis540p.jpg'); 
+    //url('https://steamuserimages-a.akamaihd.net/ugc/1824531491052384384/22211887F46E9FDF0475B6E6C52B0136D7C5C95D/?imw=512&amp;imh=288&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true') no-repeat;
+    background-size: cover;
+
+    >div {
+        height: 100%;
+    }
+}
+
+.formWrapper {
+    display: flex;
+}
+
+.form {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: var(--bg-color-primary);
+    padding: 14px;
+    margin-left: auto;
+    margin-top: 12px;
+    margin-right: 27px;
+    border-radius: 8px;
+    gap: 8px;
+    min-width: 450px;
+}
+
+.errorMsg {
+    color: var(--error-red);
+}
+.textarea {
+    outline: none;
+    background-color: var(--bg-color-secondary);
+    font: var(--font-m);
+    border-radius: 6px;
+    padding: 8px 9px;
+    border: 1px solid var(--grey-20);
+    transition-property: border, box-shadow, transform, color, background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    color: var(--text-color);
+
+    &.error {
+        border: 1px solid var(--error-red);
+        color: var(--error-red);
+
+
+        &:hover {
+            color: var(--dark-grey);
+        }
+        &:focus {
+            color: var(--text-color);
+        }
+
+        &:hover,
+        &:focus {
+            border: 1px solid var(--active-blue);
+            box-shadow: var(--active-blue-shadow);
+        }
+    }
+
+    &:focus, &:hover {
+        border: 1px solid var(--active-blue);
+        box-shadow: var(--active-blue-shadow);
+    }
+
+    // ЗАМЕНА ЦВЕТА У PLACEHOLDER'A
+    &::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: var(--grey-40);
+    }
+
+    &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: var(--grey-40);
+        opacity: 1;
+    }
+
+    &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: var(--grey-40);
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: var(--grey-40);
+    }
+
+    &::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: var(--grey-40);
+    }
+
+    &::placeholder {
+        /* Most modern browsers support this now. */
+        color: var(--grey-40);
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;               /* ширина scrollbar */
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;        /* цвет дорожки */
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--secondary);    /* цвет плашки */
+        border-radius: 2px;       /* закругления плашки */
+        // border: 1px solid orange;  /* padding вокруг плашки */
+      }
+}
+
+@media screen and (max-width: 1024px) {
+    .form {
+        min-width: 400px;
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .formWrapper {
+        height: 100%;
+        align-items: center;
+    }
+    .form {
+        margin-right: auto;
+        padding: 24px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .form {
+        min-width: 0;
+        width: 100%;
+    }
+}
+

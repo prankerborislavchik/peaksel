@@ -1,0 +1,51 @@
+.switchGridBtn {
+    background: var(--grey-40);
+    display: inline-block;
+    padding: 6px;
+    border-radius: 8px;
+    position: absolute;
+    
+    top: 10px;
+    right: 0px;
+
+    .icon {
+        padding: 5px;
+        border-radius: 5px;
+        height: 40px !important;
+
+        transition: background .2s ease-in;
+        
+        svg path{
+            stroke: var(--grey-60);
+            transition: stroke .3s ease-in;
+        }
+        &:hover svg path{
+            stroke: var(--grey-100);
+        }
+
+        &.isActive {
+            background: var(--grey-20);   
+
+            svg path {
+                stroke: var(--grey-100);
+            }
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+
+        &:not(:last-child) {
+            margin-right: 3px;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .switchGridBtn {
+        top: 40px;
+    }
+}

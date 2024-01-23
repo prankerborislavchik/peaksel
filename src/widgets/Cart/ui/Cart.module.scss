@@ -1,0 +1,207 @@
+.wrapper {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.cart {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+    align-items: start;
+    justify-content: center;
+}
+
+.goodsList {
+    flex: 0 1 calc(100% - 275px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: calc(100dvh - 335px);
+    overflow-y: auto;
+    overflow-x: unset;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        /* ширина scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--bg-color-inverted);
+        /* цвет дорожки */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--dark-grey);
+        /* цвет плашки */
+        border-radius: 2px;
+        /* закругления плашки */
+        // border: 3px solid orange;
+        /* padding вокруг плашки */
+    }
+}
+
+@media screen and (max-width: 1240px){
+    .goodsList {
+        max-height: calc(100dvh - 350px);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .goodsList {
+        overflow: visible;
+        max-height: none;
+    }
+}
+
+.listItem {
+    display: flex;
+    background-color: var(--bg-color-primary);
+    padding: 14px 21px;
+    border-radius: 0.7rem;
+    box-shadow: var(--box-shadow-common);
+}
+
+.middle {
+    padding-right: 12px;
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+.tvName {
+    margin-bottom: 9px;
+    display: -webkit-box;
+    width: 100%;
+    margin-bottom: 17px;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    -webkit-box-orient: vertical;
+    overflow: hidden
+}
+
+.quantityBlock {
+    border-radius: 8px;
+    width: max-content;
+    border: 2px solid var(--text-color);
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.quantityInput {
+    max-width: 36px;
+    border-radius: 0px !important;
+    border-width: 2px !important;
+    border-color: transparent !important;
+    text-align: center;
+    padding: 4px 6px !important;
+
+    &:hover, &:focus {
+        box-shadow: none !important;
+    }
+}
+
+.quantityBtn {
+    color: var(--text-color);
+    background: var(--bg-color-secondary);
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    border-radius: 0px !important;
+
+    &:hover, &:focus {
+        background: var(--bg-color-primary);
+    }
+}
+
+.price {
+    font-size: 14px;
+    color: var(--grey-40);
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 6px;
+    flex-grow: 1;
+}
+
+.trashBtn {
+    padding: 3px 6px !important;
+}
+
+.icon {
+    g {
+        fill: var(--text-color);
+    }
+}
+
+.orderBlock {
+    background: var(--bg-color-primary);
+    padding: 10px 6px;
+    flex: 1 0;
+    flex-direction: column;
+    box-shadow: var(--box-shadow-common);
+    border-radius: 0.4rem;
+}
+
+.orderInfo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.orderChar {
+    font-size: 18px;
+}
+
+.makeOrderBtn {
+    width: 100%;
+}
+
+// DELETE MODAL
+.deleteHeading {
+    font: var(--font-l);
+    margin-bottom: 24px;
+}
+
+.text {
+    font: var(--font-m);
+    margin-bottom: 15px;
+}
+
+.actionBlock {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+@media screen and (max-width: 520px){
+    .goodsList {
+        flex-basis: 100%;
+    }
+    .listItem {
+        padding: 8px 12px;
+        border-radius: 6px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .listItem {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.skeleton {
+    width: 100%;
+    height: 24px;
+    // margin-bottom: 24px;
+}

@@ -1,0 +1,17 @@
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    svg {
+        path {
+            fill: var(--soft);
+        }
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .btnText {
+        display: none;
+    }
+}
