@@ -20,7 +20,6 @@ interface IResetPasswordFormData {
 }
 
 export const ResetPasswordForm: FC<IResetPasswordFormProps> = (props) => {
-    
     const { className, resetToken } = props
     const { handleSubmit, formState: { errors }, register, setError } = useForm<IResetPasswordFormData>()
     const [answer, setAnswer] = useState('')

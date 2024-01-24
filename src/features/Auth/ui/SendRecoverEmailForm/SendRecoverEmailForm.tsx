@@ -65,7 +65,7 @@ export const SendRecoverEmailForm: FC<IResetPasswordFormProps> = (props) => {
                         disabled={!!answer}
                     />
                 </div>
-                {answer}
+                {answer && <div className={styles.success}>{answer}</div>}
                 <div className={cn(styles.bottom)}>
                     <div>
                         <p className={styles.reg}>

@@ -55,12 +55,12 @@ export async function PATCH(request: NextRequest, { params }: { params: { resetT
         }
         
         // Если с токеном всё ок, начинаем работать с паролями и самим пользователем
-        const ResponseSchema = z.object({
+        const RequestSchema = z.object({
             password: z.string().trim().min(1, "Введите пароль").max(65, "Слишком длинный пароль."),
             repeatPassword: z.string().trim().min(1, "Повторите пароль").max(65, "Слишком длинный пароль.")
         })
 
-        const data = ResponseSchema.safeParse(await request.json())
+        const data = RequestSchema.safeParse(await request.json())
         if (!data.success) throw ErrorApi.badRequestValidation(data.error.errors)
 
         const { data: { password, repeatPassword } } = data

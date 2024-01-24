@@ -4,7 +4,8 @@
 module.exports = {
     experimental: {
         // appDir: true, 
-        serverComponentsExternalPackages: ["sequelize", "pg"]
+        serverComponentsExternalPackages: ["sequelize", "pg"],
+        // instrumentationHook: true
     },
     webpack(config) {
         config.module.rules.push({

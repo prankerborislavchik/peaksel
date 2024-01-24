@@ -25,7 +25,6 @@ interface IFormInput {
 }
 
 export const CallUsModal: FC<ICallUsModalProps> = (props) => {
-    
     const {
         isOpen,
         handleClose,
@@ -39,7 +38,6 @@ export const CallUsModal: FC<ICallUsModalProps> = (props) => {
     } = useForm<IFormInput>({});
     const [errorMsg, setErrorMsg] = useState('')
 
-    
     const onSubmit: SubmitHandler<IFormInput> = (data) => {
         console.log(data)
     }

@@ -7,7 +7,7 @@ import { z } from 'zod'
 export async function GET(request: NextRequest) {
     try {
         // Получаем получается всю корзину
-        const userData = userMiddleware(request) //{id: "ca8dc7fd-e44c-418d-96db-4a0883eb2da4"}
+        const userData = userMiddleware(request)
 
         const lightCart = request.nextUrl.searchParams.has('idOnly')
 
@@ -67,7 +67,6 @@ export async function PATCH(request: NextRequest) {
     try {
         // Получается добавляем к корзине 
         const userData = userMiddleware(request)
-        // { id: "ca8dc7fd-e44c-418d-96db-4a0883eb2da4" }
 
         const RequestSchema = z.object({
             televisionId: z.string().trim().min(1, 'ID телевизора обязателен к указанию'),

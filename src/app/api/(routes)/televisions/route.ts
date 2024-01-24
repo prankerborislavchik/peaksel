@@ -38,6 +38,8 @@ export async function GET(request: NextRequest) {
         // ARRAYS
         const screenTechnology = request.nextUrl.searchParams.getAll('screenTechnology')
         if (screenTechnology.length) tvSearch.screenTechnology = {[Op.contains]: screenTechnology}
+        const illuminationType = request.nextUrl.searchParams.getAll('illuminationType')
+        if (illuminationType.length) tvSearch.illuminationType = {[Op.contains]: illuminationType}
         // PAGINATION
         const defaultPageSize = 20
         const maxPageSize = 100
