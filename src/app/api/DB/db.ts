@@ -8,7 +8,12 @@ export const sequelize = new Sequelize(process.env.POSTGRES_DATABASE || '', proc
         port: 5432,
         host: process.env.POSTGRES_HOST,
         dialectModule: pg,
-        ssl: true,
+        // ssl: true,
+        dialectOptions: {
+            ssl: {
+                require: true
+            }
+        }
     }
 )
 // export const sequelize = new Sequelize((process.env.POSTGRES_URL || '')+'?sslmode=require')
