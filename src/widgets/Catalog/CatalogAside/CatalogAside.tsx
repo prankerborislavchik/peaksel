@@ -1,5 +1,5 @@
 'use client'
-import { FC, ReactNode, useEffect, useState } from 'react'
+import { FC, ReactNode, Suspense, useEffect, useState } from 'react'
 import styles from './CatalogAside.module.scss'
 import cn from 'classnames'
 import { Button } from '@/shared/ui/Button'
@@ -35,7 +35,9 @@ export const CatalogAside: FC<ICatalogAsideProps> = (props) => {
                 >
                     <CrossIcon className={styles.crossIcon}/>
                 </Button>   
-                <CatalogFilter />      
+                <Suspense>
+                    <CatalogFilter />      
+                </Suspense>
             </aside>
         </>
     )

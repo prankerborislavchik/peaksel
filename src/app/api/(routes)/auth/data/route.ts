@@ -39,7 +39,7 @@ export async function GET(request: NextRequest) {
                 }), {
                     httpOnly: true,
                     maxAge: 24 * 24 * 60 * 60,
-                    secure: process.env.NODE_ENV === 'production',
+                    secure: false, //process.env.NODE_ENV === 'production',
                     sameSite: "strict",
                     path: "/"
                 })

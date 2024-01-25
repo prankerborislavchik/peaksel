@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { ErrorApi } from '@/app/api/services/error/errorApi'
 import { Brand, Television } from '@/app/api/DB/models'
-import { TelevisionDataRequestSchema } from '../route'
+import { TelevisionDataRequestSchema } from '../televisionDataRequestSchema'
 import { adminMiddleware } from '../../middlewares'
 
 export async function GET(request: NextRequest, {params: {id}}: {params: {id: string}}) {

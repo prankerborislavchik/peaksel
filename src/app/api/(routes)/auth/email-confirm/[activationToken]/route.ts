@@ -32,7 +32,7 @@ export async function POST(request: NextRequest, { params: { activationToken } }
         const authCookie = serialize('authorization', tokenService.generateAT({ id, email, roles }), {
             httpOnly: true,
             maxAge: 24 * 24 * 60 * 60,
-            secure: process.env.NODE_ENV === 'production',
+            secure: false, //process.env.NODE_ENV === 'production',
             sameSite: "strict",
             path: "/"
         })

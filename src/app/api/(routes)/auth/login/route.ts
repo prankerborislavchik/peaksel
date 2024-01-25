@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
             id: candidate.id, roles: candidate.roles, email,
         }), {
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
+            secure: false, //process.env.NODE_ENV === 'production',
             maxAge: 24 * 24 * 60 * 60,
             path: "/",
             sameSite: "strict",
