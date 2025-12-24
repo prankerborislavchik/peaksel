@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
         const data = await request.json()
         if ((data.setupKey === process.env.SETUP_KEY) && !!process.env.SETUP_KEY) {
             await sequelize.authenticate()
-            await sequelize.sync()
+            // await sequelize.sync()
         }
         // console.log(request.nextUrl.searchParams.has('idOnly'))
         // await Order.sync({force: true})

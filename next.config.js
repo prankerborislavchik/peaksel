@@ -35,5 +35,6 @@ module.exports = {
                 // pathname: '/account123/**',
             },
         ],
-    }
+    },
+    output: "standalone",
 };

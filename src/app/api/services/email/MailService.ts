@@ -31,10 +31,10 @@ class MailService {
 
     public async sendLoginMail({to, activationToken}: ISendLoginMail) {
         try {
-            await this.transporter.sendMail({
+            this.transporter.sendMail({
                 from: this.userGmail,
                 to,
-                html: registrationMail({activationToken}),
+                html: await registrationMail({activationToken}),
                 subject: "Подтверждение регистрации в Пиксель"
             })   
         } catch (error) {
@@ -45,10 +45,10 @@ class MailService {
 
     public async sendRecoverPasswordMail({to, resetToken}: ISendRecoverPassMail) {
         try {
-            await this.transporter.sendMail({
+            this.transporter.sendMail({
                 from: this.userGmail,
                 to,
-                html: resetPasswordMail({resetToken}),
+                html: await resetPasswordMail({resetToken}),
                 subject: "Восстановление пароля для входа в учётную запись на Пиксель"
             })   
         } catch (error) {
