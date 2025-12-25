@@ -79,5 +79,8 @@
     "mini-css-extract-plugin": "^2.7.6",
     "sass": "^1.66.1",
     "ts-node": "^10.9.2"
+  },
+  "engines": {
+    "node": "24.x"
   }
 }
