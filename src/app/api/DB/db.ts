@@ -8,9 +8,11 @@ const sequelize = new Sequelize(process.env.POSTGRES_DATABASE || '', process.env
         port: parseInt(process.env.POSTGRES_PORT || "5432"),
         host: process.env.POSTGRES_HOST,
         dialectModule: pg,
-        // ssl: true,
+        ssl: process.env.NODE_ENV == "production",
         dialectOptions: {
-            ssl: false
+            ssl: {
+                require: process.env.NODE_ENV == "production"
+            }
         }
     }
 )
